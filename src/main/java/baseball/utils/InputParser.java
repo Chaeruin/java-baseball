@@ -7,7 +7,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class InputParser {
-    public int[] parseInt(String input) {
+    public static int[] parseInt(String input) {
         String[] inputs = input.split("");
         int[] inputNumbers = new int[inputs.length];
         if (InputValidator.isAllNumber(input) && InputValidator.isThreeNumber(input)) {
