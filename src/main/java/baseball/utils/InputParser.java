@@ -10,7 +10,7 @@ public class InputParser {
     public static int[] parseInt(String input) {
         String[] inputs = input.split("");
         int[] inputNumbers = new int[inputs.length];
-        if (InputValidator.isAllNumber(input) && InputValidator.isThreeNumber(input)) {
+        if (InputValidator.isAllNumber(input) && InputValidator.isThreeNumber(input) && InputValidator.isNotDuplicate(input) && InputValidator.isNumberZero(input)) {
             inputNumbers = Arrays.stream(inputs).mapToInt(Integer::parseInt).toArray();
         }
         return inputNumbers;

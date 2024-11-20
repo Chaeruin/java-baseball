@@ -22,4 +22,20 @@ public class InputValidator {
         }
         return true;
     }
+
+    public static boolean isNotDuplicate(String input) {
+        String[] inputs = input.split("");
+        if (inputs[0].equals(inputs[1]) || inputs[0].equals(inputs[2]) || inputs[1].equals(inputs[2])) {
+            throw new IllegalArgumentException(ErrorMessage.INVALID_DUPLICATE_NUMBER.getErrorMessage());
+        }
+        return true;
+    }
+
+    public static boolean isNumberZero(String input) {
+        String[] inputs = input.split("");
+        if (inputs[0].equals("0") || inputs[1].equals("0") || inputs[2].equals("0")) {
+            throw new IllegalArgumentException(ErrorMessage.INVALID_NUMBER_ZERO.getErrorMessage());
+        }
+        return true;
+    }
 }
